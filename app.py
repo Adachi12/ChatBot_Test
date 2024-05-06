@@ -22,7 +22,7 @@ def communicate():
         messages=messages
     )  
 
-    bot_message = response.choices[0]["message"]["content"]
+    bot_message = response.choices[0].message.content
     bot_response = {"role": "assistant", "content": bot_message}
     messages.append(bot_response)
 
