@@ -23,7 +23,8 @@ def communicate():
     )  
 
     bot_message = response.choices[0]["message"]["content"]
-    messages.append(bot_message)
+    bot_response = {"role": "assistant", "content": bot_message}
+    messages.append(bot_response)
 
     st.session_state["user_input"] = ""  # 入力欄を消去
 
